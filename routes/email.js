@@ -24,7 +24,7 @@ function sendEmail(order){
     attachments: [{
         filename: 'fairy_logo.png',
         path: __dirname + "/image/fairy_logo.png",
-        cid: 'unique@kreata.ee' 
+        cid: 'unique@kreata.ee'
         }]
     };
 
@@ -37,7 +37,6 @@ function sendEmail(order){
 }
 
 function createEmail(order){
-    //let url = "http://healthyrise.com/wp-content/uploads/2016/07/Cupcake-3.jpg";
     let newDateFormat = moment(order.customer.pickUpTime).format("dddd, D MMMM YYYY");
     let newTimeFormat = moment(order.customer.pickUpTime).format("h:mm")
     return (`

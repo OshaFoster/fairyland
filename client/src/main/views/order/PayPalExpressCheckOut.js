@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
 import PropTypes from 'prop-types';
- 
+
 class PaypalButton extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +10,7 @@ class PaypalButton extends React.Component {
     window.ReactDOM = ReactDOM;
     this.state = {
       showButton: false,
-      env: 'production', // Or 'sandbox'
+      env: 'sandbox', // Or 'sandbox'
       client: {
         sandbox:    'AbLJeEIqN0CMQ2NKrBwUA5ZEH4JWPTMhTbe-6Wu0WfDbb0Zzjz69OEECy5m4lr1eoIKfBYTjPnm3lU6b', // sandbox client ID
         production: 'AUUZW6xTiPMVOnblHpk3MUVepgkoXv9McJN9Of7l6Mu8LpoxbkJxUhRKZw8VnaFx384fOSO3Pbt-zlwY' // production client ID
@@ -36,7 +36,7 @@ class PaypalButton extends React.Component {
       }
     }
   }
- 
+
   render() {
     const payment = () => window.paypal.rest.payment.create(this.state.env, this.state.client, {
       transactions: [
@@ -56,7 +56,7 @@ class PaypalButton extends React.Component {
       this.props.onSuccess(payment);
     })
 };
- 
+
     let ppbtn = '';
     if (this.state.showButton) {
         let Button = window.paypal.Button.react;
@@ -68,7 +68,7 @@ class PaypalButton extends React.Component {
         label: 'pay'
     }}
         locale= {'pt_BR'}
-        
+
         env={this.state.env}
         client={this.state.client}
         payment={payment}
@@ -80,12 +80,12 @@ class PaypalButton extends React.Component {
     return <div>{ppbtn}</div>;
   }
 }
- 
+
 PaypalButton.propTypes = {
   currency: PropTypes.string.isRequired,
   total: PropTypes.number.isRequired
 };
- 
+
 PaypalButton.defaultProps = {
   env: 'sandbox',
   onSuccess: (payment) => {
@@ -98,5 +98,5 @@ PaypalButton.defaultProps = {
     console.log('Error loading Paypal script!', err);
   },
 };
- 
+
 export default scriptLoader('https://www.paypalobjects.com/api/checkout.js')(PaypalButton);

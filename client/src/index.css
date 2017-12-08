@@ -158,7 +158,7 @@ i:hover{
    }
 }
 @media (max-width: 599px) {
-  .cupcakesBox { 
+  .cupcakesBox {
       width: 100%;
       height: auto;
    }
@@ -174,8 +174,8 @@ i:hover{
    }
 }
 @media screen and (max-width: 900px) and (min-width: 600px) {
-  .cupcakesBox { 
-      width: 50%; 
+  .cupcakesBox {
+      width: 50%;
   }
   .reviewOrderButtonBox {
      padding-top: 40px;
@@ -397,7 +397,7 @@ i:hover{
 
 .thankYouBox{
   text-align: center;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 100px;
   background-color: #F2E0E4;
   height: auto;
