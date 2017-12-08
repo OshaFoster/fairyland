@@ -1,6 +1,6 @@
 import axios from "axios";
-const userUrl = "http://localhost:8000/admin/"
-const ordersUrl = "http://localhost:8000/admin/orders";
+const userUrl = "/admin/"
+const ordersUrl = "/admin/orders";
 
 const LOGON = "LOGON"
 const HANDLE_AUTH_ERR = "HANDLE_AUTH_ERR"

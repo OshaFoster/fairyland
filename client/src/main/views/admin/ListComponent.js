@@ -15,14 +15,14 @@ class ListComponent extends React.Component{
     
     componentDidMount() {
         this.props.verify();  
-        axios.get(`http://localhost:8000/admin/orders`).then(response => {
+        axios.get(`/admin/orders`).then(response => {
             this.setState({order: response.data});
         })
     }
   
     handleEdit(event, id) {
         event.persist();
-        axios.put("http://localhost:8000/admin/orders/" + id, {
+        axios.put("/admin/orders/" + id, {
             completed: event.target.checked
         })
         .then((response) => {

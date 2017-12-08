@@ -16,7 +16,7 @@ class CupcakesContainer extends React.Component{
   }
 
   componentDidMount(){
-      axios.get('http://localhost:8000/cupcake/').then(response => {
+      axios.get('/cupcake/').then(response => {
         this.setState({
           cupcakes: response.data.reverse()
         })

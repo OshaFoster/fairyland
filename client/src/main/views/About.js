@@ -2,7 +2,6 @@ import React from "react";
 import Emoji from 'react-emoji-render';
 
 function About(){
-
     return(
       <div className="about">
         <div className="aboutTitle">
@@ -31,20 +30,18 @@ function About(){
             <a href="https://showtheway.io/to/-27.514543,-48.51497?name=FairyLand%20Caf%26eacute%3B%20%26amp%3B%20Cupcakeria" title="Show the Way to FairyLand Café & Cupcakeria with your favorite navigation application">Show the Way</a>
           </div>
         </div>
-          <div className="tripAdvisor">
-              <div id="TA_selfserveprop66" className="TA_selfserveprop">
-                    <ul id="sTHoXGMtQp" className="TA_links TxRvp6Cl">
-                        <li id="CvleFmZaHI" className="hAyZtzG">                    
-                            <a href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
-                        </li>
-                    </ul>
-                </div>
-          </div>
+            <div className="tripAdvisor">
+                <div id="TA_selfserveprop66" className="TA_selfserveprop">
+                      <ul id="sTHoXGMtQp" className="TA_links TxRvp6Cl">
+                          <li id="CvleFmZaHI" className="hAyZtzG">                    
+                              <a href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
         </div>
       </div>
     )  
   }
   
-
-
 export default About;

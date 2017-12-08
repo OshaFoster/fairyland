@@ -14,7 +14,7 @@ class ThankYou extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:8000/order/${this.props.match.params.id}`).then(response => {
+    axios.get(`/order/${this.props.match.params.id}`).then(response => {
       this.setState({order: response.data})
     })
   }

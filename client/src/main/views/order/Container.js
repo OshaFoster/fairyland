@@ -58,7 +58,7 @@ class OrderContainer extends React.Component {
     }
 
     placeOrder() {
-        axios.post('http://localhost:8000/order/', this.state).then(response => {
+        axios.post('/order/', this.state).then(response => {
             console.log(response.data);
             this.props.history.push(`/confirmation/${response.data._id}`);
         })

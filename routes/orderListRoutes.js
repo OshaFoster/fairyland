@@ -9,7 +9,6 @@ const auth = expressJwt({ secret: settings.secret });
 
 orderListRoute.use(auth);
 
-
 orderListRoute.get("/", (req, res)=>{
   Order.find().populate("items.cupcake").exec((err, orders)=>{
     if (err) return res.status(500).send(err);
